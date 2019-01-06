@@ -1,5 +1,4 @@
 // Book Class for representing books 
-
 class Book {
     constructor(title, author, isbn) {
         this.title = title;
@@ -9,7 +8,6 @@ class Book {
 }
 
 // UI class for Handling UI tasks
-
 class UI {
     static displayBooks() {
         const books = Store.getBooks();
@@ -81,14 +79,11 @@ class Store {
     }
 }
 
-
-
 // Event: Display
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // Event: add Books 
 document.querySelector('#book-form').addEventListener('submit', (e) => {
-
     e.preventDefault();
 
     // get form values
@@ -122,7 +117,4 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
     // Show Alert
     UI.showAlert('Book Removed!', 'warning');
-
-
-
 })
